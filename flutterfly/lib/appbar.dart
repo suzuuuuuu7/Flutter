@@ -33,6 +33,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Padding(
+          padding: const EdgeInsets.only(bottom: 25.0),
+          child: Text("Flutter"),
+        ),
+        backgroundColor: Colors.red,
         toolbarHeight: 120,
 
         leading: Padding(
@@ -73,14 +78,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ],
-        backgroundColor: Colors.redAccent,
-        title: Padding(
-          padding: EdgeInsets.only(bottom: 25, right: 50),
-          child: Text(
-            "FlutteRflY",
-            style: TextStyle(color: Colors.black, fontSize: 27),
-          ),
-        ),
       ),
     ); // This trailing comma makes auto-formatting nicer for build methods.
   }
