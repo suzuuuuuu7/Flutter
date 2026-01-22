@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Fill The Form',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -55,6 +55,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var emailText = TextEditingController();
+  var passText = TextEditingController();
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -80,8 +82,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                keyboardType: TextInputType.phone,
+                controller: emailText,
                 // enabled: false,
                 decoration: InputDecoration(
+                  hintText: "Enter username or email",
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.deepOrange, width: 2),
@@ -94,24 +99,37 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.indigo, width: 2),
                   ),
-                  suffixText: ("user_name exit."),
                   suffixIcon: IconButton(
                     onPressed: () {
                       print("Button clicked");
                     },
                     icon: Icon(Icons.remove_red_eye, color: Colors.red),
                   ),
-                  prefixIcon: Icon(Icons.email, color: Colors.black54),
+                  prefixIcon: Icon(Icons.phone, color: Colors.black54),
                 ),
               ),
               SizedBox(height: 50),
               TextField(
+                controller: passText,
+                obscureText: true,
+                obscuringCharacter: "*",
                 decoration: InputDecoration(
+                  hintText: "Password",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(15),
                     borderSide: BorderSide(color: Colors.green),
                   ),
+                  suffixIcon: Icon(Icons.visibility_off),
                 ),
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  String umail = emailText.toString();
+                  String pass = passText.text;
+                  print("Email:$umail,Pass:$pass");
+                },
+                child: Text("LOGIN"),
               ),
             ],
           ),
