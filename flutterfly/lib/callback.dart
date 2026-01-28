@@ -30,7 +30,10 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   callback() {
-    print("button clicked!!;"); // function declaration
+    int a = 30;
+    int b = 40;
+    int sum = a + b;
+    print("The sum of a and b is: $sum"); // function declaration
   }
 
   @override
