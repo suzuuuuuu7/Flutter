@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -75,10 +75,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
+        child: SizedBox(
           width: 500,
           height: 500,
-
           child: Stack(
             children: [
               Padding(
@@ -96,7 +95,6 @@ class _MyHomePageState extends State<MyHomePage> {
               Positioned(
                 top: 120,
                 left: 80,
-
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(

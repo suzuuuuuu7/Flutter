@@ -1,7 +1,7 @@
 void main() {
   String name = "sujal kc";
   name = "Rajan bhdandari"; // Thiis is acceptance
-  print("$name");
+  print(name);
   final address;
   // final var id;  var also cannot be used because we used var keyboard for dynamic initialization
   // address = "Baglung"; This cannot be done because of final keyword

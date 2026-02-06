@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.red,
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         textTheme: TextTheme(
           headlineSmall: TextStyle(color: Colors.red, fontSize: 50),
           titleSmall: TextStyle(color: Colors.green, fontSize: 100),
@@ -93,7 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
             "Its me karuna.",
             style: Theme.of(context).textTheme.headlineSmall,
           ),
-
           Text("Bye Bye", style: Theme.of(context).textTheme.titleSmall),
         ],
       ),

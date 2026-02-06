@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -105,7 +105,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     bottomRight: Radius.circular(45),
                   ),
                 ),
-                child: Image.asset("assets/images/waoo.webp"),
+                child: Image.asset(
+                  "assets/images/waoo.webp",
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Padding(
@@ -115,6 +118,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: BoxDecoration(
                   color: Colors.brown,
                   borderRadius: BorderRadius.all(Radius.circular(32)),
+                ),
+                child: SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      print("regestrated..");
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.deepOrangeAccent,
+                    ),
+                    child: Text(
+                      "Click here!",
+                      style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 50,
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),

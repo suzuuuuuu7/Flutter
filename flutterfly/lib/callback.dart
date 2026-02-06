@@ -29,7 +29,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  callback() {
+  void callback() {
     int a = 30;
     int b = 40;
     int sum = a + b;

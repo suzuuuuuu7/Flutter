@@ -35,17 +35,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(title: Text(widget.title)),
       body: Row(
         children: [
-          Container(
+          SizedBox(
             height: 200,
             width: 90,
             child: Image.asset("assets/images/img.jpg"),
           ),
-          Container(
+          SizedBox(
             height: 200,
             width: 90,
             child: Image.asset("assets/images/flutter.jpg"),
           ),
-          Container(
+          SizedBox(
             height: 100,
             width: 80,
             child: Image.asset("assets/images/coffeexstudy.webp"),

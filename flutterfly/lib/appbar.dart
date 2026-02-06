@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(title: 'Welcome to Flutter'),
-
       debugShowCheckedModeBanner: false,
     );
   }
@@ -39,7 +38,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         backgroundColor: Colors.red,
         toolbarHeight: 120,
-
         leading: Padding(
           padding: EdgeInsets.only(bottom: 25),
           child: IconButton(

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -73,14 +73,13 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text("flutter"),
       ),
-      body: Column(       
+      body: Column(
         children: [
           FaIcon(FontAwesomeIcons.amazon, color: Colors.redAccent, size: 60),
           SizedBox(height: 20),
           FaIcon(FontAwesomeIcons.braveReverse, color: Colors.green, size: 60),
           SizedBox(height: 20),
           Container(
-  
             width: 100,
             height: 100,
             color: Colors.blueGrey,

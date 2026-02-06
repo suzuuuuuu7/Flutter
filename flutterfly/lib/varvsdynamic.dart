@@ -8,7 +8,7 @@ void main() {
 
   // This is static initialize with variable with intete value 50
   //so, we can't change this later;
-  var name; // This is dynamic initialize and we can assign value of differnt datatype.
+  Object name; // This is dynamic initialize and we can assign value of differnt datatype.
   name = "sujal kc";
   print("This is my name: $name");
   name = "Manoj";

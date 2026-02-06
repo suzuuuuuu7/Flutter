@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.yellow),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.yellow),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: 300,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -122,7 +122,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   suffixIcon: Icon(Icons.visibility_off),
                 ),
               ),
-
               ElevatedButton(
                 onPressed: () {
                   String umail = emailText.toString();

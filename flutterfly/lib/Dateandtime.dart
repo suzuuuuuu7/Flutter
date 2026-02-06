@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const MyHomePage(title: 'Welcome to Flutter'),
-
       debugShowCheckedModeBanner: false,
     );
   }
@@ -35,7 +34,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 120,
-
         leading: Padding(
           padding: EdgeInsets.only(bottom: 25),
           child: IconButton(
@@ -84,16 +82,14 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: 200,
           height: 200,
-
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text("Current Time: ${time.year}"),
               SizedBox(height: 20),
-
               ElevatedButton(
                 onPressed: () {
                   setState(() {});
